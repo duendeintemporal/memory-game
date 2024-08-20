@@ -1,0 +1,198 @@
+:root{
+    font-size: 10px;
+}
+.container-wrapper{
+    display: flex;
+    gap:2px;
+  }
+
+  .memory-wrapper{
+    background-color: black;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: 78vw;
+    height: auto;
+    padding: 1.5rem;
+    padding-top: 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .memory-controls-wrapper{
+    width: 21vw;
+    min-height: 100vh;
+    border: 2px gray solid inset;
+    border-radius: 0.5rem;
+    background-color: black;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+
+.memory-cards{
+    width: 14vw;
+    height: 14vw;
+    border: 2px black solid;
+    border-radius: 1rem;
+    background-color: brown;
+}
+
+.memory-cards-images{transition: background-color 0.3s ease;}
+.memory-cards-images:hover{
+    background-color: blueviolet;
+}
+
+.controls{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    gap: 2vw;
+}
+.controls, .memory-timer, .average{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.memory-timer{
+    color: whitesmoke;
+    /* font: 400 1.3rem/1.5 'monospace'; */
+}
+
+.start-button{
+    width: 88%;
+    padding: 0.5rem;
+    font: 800 1.6rem/1.5 'monospace';
+}
+
+.average-wrapper{
+    display: flex;
+    flex-flow: column wrap;
+    width: 88%;
+    min-height: 100px;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.average{
+    color: black;
+    margin-top: 0.4rem;
+    font: 600 1.5rem/1.5 'monospace';
+} 
+
+#images-set{
+     width:100%;
+     font: 300 1.2rem/1.5 "monospace";
+     position: relative;
+     top: 100px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 414px) {
+    .memory-cards{
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .memory-wrapper{
+        justify-content: center;
+        align-content: center;
+    }
+    .memory-cards-images:active, .memory-cards-images:focus-within{
+        background-color: blueviolet;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (max-width: 768px) {
+    .container-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        gap:2px;
+    }
+    
+    .memory-wrapper{
+        background-color: black;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        height: auto;
+        padding: .5rem;
+    }
+    
+    .memory-controls-wrapper{
+        width: 100%;
+        min-height: 15vh;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+    .memory-cards-images{pointer-events: none;}
+    .memory-cards-images:active, .memory-cards-images:focus-within{
+        background-color: blueviolet;
+    }
+    
+    .memory-cards{
+        width: 16vw;
+        height: 16vw;
+    }
+    
+    .controls, .memory-timer, .average{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+    }
+    .controls, .memory-timer{width:25%}
+    
+    .memory-timer{
+        width: 100%;
+        color: whitesmoke;
+        font: 300 1.2rem/1.5 'monospace';
+        position: relative;
+        top: 14px;
+    }
+    
+    .start-button{
+        width: 100%;
+        padding: 0.5rem;
+        font: 800 1.6rem/1.5 'monospace';
+    }
+    
+    .average-wrapper{
+        display: flex;
+        flex-flow: column wrap;
+        width: 48%;
+        min-height: 100px;
+    }
+    
+    #images-set{
+        width:100%;
+        font: 300 1.2rem/1.5 "monospace";
+        position: relative;
+        top: -48px;
+   }
+}   
+
+/* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 1280px) {
+  /*For Desktop*/
+  .memory-wrapper{
+      justify-content: center;
+      align-content: flex-start;  
+  } 
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {}  */
